@@ -1,5 +1,6 @@
 class Podcast < ApplicationRecord
   has_many :users
   has_many :reviews
-  belongs_to :genre, through: :podcast_genres 
+  has_many :podcast_genres
+  has_many :genres, through: :podcast_genres
 end
