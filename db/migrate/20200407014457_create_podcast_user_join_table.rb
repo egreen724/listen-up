@@ -3,6 +3,7 @@ class CreatePodcastUserJoinTable < ActiveRecord::Migration[5.2]
     create_table :users_podcasts do |t|
       t.integer :user_id
       t.integer :podcast_id
+      t.timestamps
     end
   end
 end

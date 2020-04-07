@@ -68,6 +68,8 @@ ActiveRecord::Schema.define(version: 2020_04_07_014457) do
   create_table "users_podcasts", force: :cascade do |t|
     t.integer "user_id"
     t.integer "podcast_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
