@@ -15,5 +15,5 @@
 
 # PodcastGenre.create(podcast_id: 1, genre_id: 1)
 
-
-erin.reviews.create(Review.create(content: 'Great science podcast!', podcast_id: 1))
+erin = User.first
+erin.reviews.create(Review.create({content: 'Great science podcast!', podcast_id: 1}))
