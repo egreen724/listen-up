@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  has_many :podcasts
+  has_many :users_podcasts
+  has_many :podcasts, through: :users_podcasts
   has_many :friendships
   has_many :reviews
   has_secure_password
