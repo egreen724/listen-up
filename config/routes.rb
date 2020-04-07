@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
 
+  get '/api/login', to: 'sessions#create'
+
+
   namespace :api do
   	resources :users
     resources :podcasts
     resources :reviews
     resources :genres
-    resources :friendships 
+    resources :friendships
+
   end
 
 
