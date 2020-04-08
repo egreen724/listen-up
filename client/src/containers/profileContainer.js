@@ -4,10 +4,21 @@ import ProfileInfo from '../components/ProfileInfo.js'
 
 
 class ProfileContainer extends React.Component {
-  debugger; 
+
+   renderProfile = () => {
+    if (this.props.currentUser != null) {
+      return (
+       <ProfileInfo user={this.props.currentUser} />
+      )
+    }
+  }
+
   render() {
     return (
-     <ProfileInfo props={this.props.currentUser} />
+      <div>
+        {this.renderProfile()}
+      </div>
+
     );
   }
 

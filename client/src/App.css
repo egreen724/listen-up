@@ -28,6 +28,11 @@
   color: #61dafb;
 }
 
+.profileImage {
+  width: 200px;
+  display: block; 
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
