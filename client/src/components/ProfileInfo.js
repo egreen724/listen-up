@@ -4,10 +4,10 @@ import ImageUploader from './ImageUploader.js'
 const ProfileInfo = (user) => {
 
   const renderUploader = (event) => {
-    event.preventDefault()
+
     return <div> <ImageUploader /> </div>
   }
-
+  
   return (
     <div className="profileCard">
       <h2>Your Profile</h2>
@@ -15,6 +15,7 @@ const ProfileInfo = (user) => {
       <button onClick={renderUploader()}>Add or Edit Profile Image</button>
       <h3> {user.user.first_name} {user.user.last_name} </h3>
       <h4> {user.user.bio} </h4>
+      <p>Podcast Count: </p>
 
     </div>
   )

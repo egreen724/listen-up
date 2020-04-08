@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_07_014457) do
+ActiveRecord::Schema.define(version: 2020_04_08_153303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2020_04_07_014457) do
     t.string "media_company"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "img_url"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -63,6 +64,7 @@ ActiveRecord::Schema.define(version: 2020_04_07_014457) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "img_url"
   end
 
   create_table "users_podcasts", force: :cascade do |t|
@@ -70,6 +72,7 @@ ActiveRecord::Schema.define(version: 2020_04_07_014457) do
     t.integer "podcast_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "listened?"
   end
 
 end

@@ -30,7 +30,15 @@
 
 .profileImage {
   width: 200px;
-  display: block; 
+  display: block;
+}
+
+.profileCard {
+  background-color: lightgrey;
+  width: 230px;
+  float: left;
+  margin: 0px 15px 0px 15px;
+  padding: 10px;
 }
 
 @keyframes App-logo-spin {
