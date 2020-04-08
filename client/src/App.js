@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Login from './components/Login.js'
+import ProfileContainer from './containers/profileContainer.js'
 import {connect} from 'react-redux'
 import { getCurrentUser } from './actions/currentUser.js'
 
@@ -12,7 +13,11 @@ class App extends React.Component {
 
   render() {
     return (
-     <Login />
+      <div>
+        <Login />
+        <ProfileContainer user={this.props.getCurrentUser}/>
+      </div>
+
     );
   }
 
