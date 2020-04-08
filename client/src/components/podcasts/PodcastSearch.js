@@ -4,7 +4,11 @@ import {connect} from 'react-redux'
 const PodcastSearch = () => {
 
   return (
-    <input type="text" placeholder="Podcast Search"/>
+    <div>
+      <input type="text" placeholder="Podcast Search"/>
+      <input type="submit" value="Search" />
+    </div>
+
   )
 }
 

@@ -5,20 +5,39 @@ import PodcastCard from '../components/podcasts/PodcastCard.js'
 
 class PodcastContainer extends React.Component {
 
+  state = {
+    podcasts: [ {
+      title: "Radiolab",
+      media_company: "WNYC Studios",
+      description: "Science for the modern world"
+    },
+    {
+      title: "Pod Save the World",
+      media_company: "Crooked Media",
+      description: "Science for the modern world"
+    }
+    ]
+  }
+
   componentDidMount() {
     // fetch call for top 10 podcasts
   }
 
    renderPodcasts = () => {
-
+     return this.state.podcasts.map((podcast) => {
+       return <PodcastCard podcast={podcast} />
+     })
   }
 
   render() {
     return (
       <div>
+      <h2> Podcasts </h2>
         <PodcastSearch />
-        <h2>Trending Podcasts </h2>
-
+        <h3>Trending </h3>
+        <div>
+          {this.renderPodcasts()}
+        </div>
       </div>
 
     );
