@@ -21,6 +21,18 @@ class PodcastContainer extends React.Component {
 
   componentDidMount() {
     // fetch call for top 10 podcasts
+    fetch('https://listen-api.listennotes.com/api/v2/best_podcasts?genre_id=100&page=2&region=us&safe_mode=0', {
+      method: 'GET',
+      headers: {
+        "X-ListenAPI-Key": '6df38566398142a3a0c025e711760376'
+      },
+      body: JSON.stringify()
+    })
+    .then(r => r.json())
+    .then( response => {
+      this.setState({podcasts: response.podcasts} )
+    }
+    )
   }
 
    renderPodcasts = () => {
@@ -35,7 +47,7 @@ class PodcastContainer extends React.Component {
       <h2> Podcasts </h2>
         <PodcastSearch />
         <h3>Trending </h3>
-        <div>
+        <div class='scroll-box'>
           {this.renderPodcasts()}
         </div>
       </div>
